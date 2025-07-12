@@ -143,6 +143,8 @@ export type PreferencesState = {
   smartAccountOptIn: boolean;
   /**
    * User to opt in for smart account upgrade for specific accounts.
+   *
+   * @deprecated This preference is deprecated and will be removed in the future.
    */
   smartAccountOptInForAccounts: Hex[];
 };
@@ -251,7 +253,7 @@ export function getDefaultPreferencesState(): PreferencesState {
     },
     privacyMode: false,
     dismissSmartAccountSuggestionEnabled: false,
-    smartAccountOptIn: false,
+    smartAccountOptIn: true,
     smartAccountOptInForAccounts: [],
   };
 }
@@ -636,6 +638,7 @@ export class PreferencesController extends BaseController<
    * smart account upgrade.
    *
    * @param accounts - accounts for which user wants to optin for smart account upgrade
+   * @deprecated This method is deprecated and will be removed in the future.
    */
   setSmartAccountOptInForAccounts(accounts: Hex[] = []): void {
     this.update((state) => {
