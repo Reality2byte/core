@@ -60,7 +60,7 @@
     "@metamask/profile-sync-controller": "^28.0.2",
     "@metamask/utils": "^11.9.0",
     "@tanstack/query-core": "^5.62.16",
-    "uuid": "^8.3.2"
+    "uuid": "^14.0.0"
   },
   "devDependencies": {
     "@metamask/auto-changelog": "^6.1.0",
